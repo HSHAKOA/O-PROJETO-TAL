@@ -3,18 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para a Melhor Mãe do Mundo!</title>
+    <title>Amor de Mãe - Feliz Dia das Mães!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
-        
-        .dancing-script {
-            font-family: 'Dancing Script', cursive;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff5f5 0%, #f8f0ff 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         
-        .montserrat {
-            font-family: 'Montserrat', sans-serif;
+        .sacramento {
+            font-family: 'Sacramento', cursive;
+        }
+        
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
         }
         
         .heart-beat {
@@ -29,246 +46,231 @@
             100% { transform: scale(1); }
         }
         
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
+        .btn-surprise {
+            background: linear-gradient(45deg, #ff6b8b, #ff8e53);
+            box-shadow: 0 4px 15px rgba(255, 107, 139, 0.4);
+            transition: all 0.3s ease;
         }
         
-        .photo-item {
-            transition: transform 0.3s ease;
+        .btn-surprise:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 139, 0.6);
         }
         
-        .photo-item:hover {
-            transform: scale(1.05);
+        .flower {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.7;
+            animation: sway 8s ease-in-out infinite;
         }
         
-        .flip-card {
-            perspective: 1000px;
-        }
-        
-        .flip-card-inner {
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        
-        .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .flip-card-front, .flip-card-back {
-            backface-visibility: hidden;
-        }
-        
-        .flip-card-back {
-            transform: rotateY(180deg);
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-b from-pink-50 to-purple-50 min-h-screen montserrat">
-    <!-- Cabeçalho com efeito de coração pulsante -->
-    <header class="text-center py-10 px-5">
-        <h1 class="text-5xl md:text-6xl font-bold dancing-script text-pink-600 mb-4">
-            <span class="heart-beat inline-block">❤️</span> Feliz Dia das Mães! <span class="heart-beat inline-block">❤️</span>
-        </h1>
-        <p class="text-xl text-purple-800">Para a mulher mais especial da minha vida</p>
-    </header>
-
-    <!-- Seção de mensagem principal -->
-    <section class="max-w-4xl mx-auto px-5 py-10 bg-white rounded-xl shadow-lg mb-10">
-        <div class="text-center">
-            <h2 class="text-3xl dancing-script text-pink-600 mb-6">Querida Mãe,</h2>
-            <div class="text-lg text-gray-700 leading-relaxed text-left">
-                <p class="mb-4">Hoje é o seu dia, e eu quero que você saiba o quanto você é especial para mim. Você é meu porto seguro, meu exemplo de força e amor, e a pessoa que sempre me apoia, não importa o que aconteça.</p>
-                <p class="mb-4">Lembro de todas as vezes que você ficou acordada cuidando de mim quando eu estava doente, das suas palavras de incentivo quando eu mais precisei, e do seu sorriso que ilumina até os dias mais difíceis.</p>
-                <p class="mb-4">Você merece todo o amor e felicidade do mundo, e hoje eu quero que você se sinta a pessoa mais amada e especial que existe. Afinal, para mim, você é simplesmente a melhor mãe que eu poderia ter!</p>
-                <p class="text-2xl dancing-script text-pink-600 mt-6">Com todo meu amor,</p>
-                <p class="text-xl dancing-script text-pink-500">Seu filho(a) que te ama muito ❤️</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeria de fotos -->
-    <section class="max-w-6xl mx-auto px-5 py-10">
-        <h2 class="text-3xl dancing-script text-center text-purple-700 mb-10">Nossos Momentos Especiais</h2>
-        <div class="photo-gallery">
-            <!-- Substitua essas imagens pelas suas fotos com sua mãe -->
-            <div class="photo-item flip-card h-64">
-                <div class="flip-card-inner h-full rounded-xl overflow-hidden shadow-lg">
-                    <div class="flip-card-front h-full bg-purple-200 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1529631176507-4a7f38d235a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mãe e filho" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flip-card-back h-full bg-pink-200 flex items-center justify-center p-4">
-                        <p class="text-center text-purple-800">"Nossa primeira foto juntos!"</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="photo-item flip-card h-64">
-                <div class="flip-card-inner h-full rounded-xl overflow-hidden shadow-lg">
-                    <div class="flip-card-front h-full bg-purple-200 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Família" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flip-card-back h-full bg-pink-200 flex items-center justify-center p-4">
-                        <p class="text-center text-purple-800">"Nossa família unida por você!"</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="photo-item flip-card h-64">
-                <div class="flip-card-inner h-full rounded-xl overflow-hidden shadow-lg">
-                    <div class="flip-card-front h-full bg-purple-200 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mãe sorrindo" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flip-card-back h-full bg-pink-200 flex items-center justify-center p-4">
-                        <p class="text-center text-purple-800">"Seu sorriso ilumina meu dia!"</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="photo-item flip-card h-64">
-                <div class="flip-card-inner h-full rounded-xl overflow-hidden shadow-lg">
-                    <div class="flip-card-front h-full bg-purple-200 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1501820488136-72669149e0d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mãe cozinhando" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flip-card-back h-full bg-pink-200 flex items-center justify-center p-4">
-                        <p class="text-center text-purple-800">"Seu amor tem o sabor da sua comida!"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vídeo de homenagem -->
-    <section class="max-w-4xl mx-auto px-5 py-10">
-        <h2 class="text-3xl dancing-script text-center text-purple-700 mb-10">Uma Surpresa Especial para Você</h2>
-        <div class="bg-white p-5 rounded-xl shadow-lg">
-            <div class="aspect-w-16 aspect-h-9">
-                <!-- Substitua pelo link de um vídeo real -->
-                <div class="bg-purple-100 rounded-lg overflow-hidden flex items-center justify-center h-96">
-                    <div class="text-center">
-                        <i class="fas fa-video text-6xl text-purple-400 mb-4"></i>
-                        <p class="text-xl text-purple-700">Aqui vai um vídeo especial que preparei para você!</p>
-                        <p class="text-sm text-purple-500 mt-2">(Substitua este espaço por um vídeo real)</p>
-                    </div>
-                </div>
-            </div>
-            <p class="text-center mt-4 text-purple-600">Espero que goste da surpresa que preparei com tanto carinho!</p>
-        </div>
-    </section>
-
-    <!-- Quiz sobre a mãe -->
-    <section class="max-w-2xl mx-auto px-5 py-10">
-        <h2 class="text-3xl dancing-script text-center text-purple-700 mb-10">Você Conhece a Melhor Mãe do Mundo?</h2>
-        <div class="bg-white p-8 rounded-xl shadow-lg">
-            <div id="quiz-container">
-                <div id="question-1" class="quiz-question">
-                    <p class="text-lg font-semibold text-purple-800 mb-4">1. Qual é a comida favorita da mamãe?</p>
-                    <div class="space-y-3">
-                        <button onclick="checkAnswer(1, 'a')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Lasanha</button>
-                        <button onclick="checkAnswer(1, 'b')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Strogonoff</button>
-                        <button onclick="checkAnswer(1, 'c')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Feijoada</button>
-                        <button onclick="checkAnswer(1, 'd')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Pizza</button>
-                    </div>
-                </div>
-                
-                <div id="question-2" class="quiz-question hidden mt-8">
-                    <p class="text-lg font-semibold text-purple-800 mb-4">2. Qual é o hobby favorito da mamãe?</p>
-                    <div class="space-y-3">
-                        <button onclick="checkAnswer(2, 'a')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Ler</button>
-                        <button onclick="checkAnswer(2, 'b')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Cozinhar</button>
-                        <button onclick="checkAnswer(2, 'c')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Assistir filmes</button>
-                        <button onclick="checkAnswer(2, 'd')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Caminhar</button>
-                    </div>
-                </div>
-                
-                <div id="question-3" class="quiz-question hidden mt-8">
-                    <p class="text-lg font-semibold text-purple-800 mb-4">3. Qual é a qualidade mais marcante da mamãe?</p>
-                    <div class="space-y-3">
-                        <button onclick="checkAnswer(3, 'a')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Paciência</button>
-                        <button onclick="checkAnswer(3, 'b')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Força</button>
-                        <button onclick="checkAnswer(3, 'c')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Carinho</button>
-                        <button onclick="checkAnswer(3, 'd')" class="w-full text-left p-3 bg-purple-100 rounded-lg hover:bg-purple-200 transition">Todas as anteriores</button>
-                    </div>
-                </div>
-                
-                <div id="quiz-result" class="hidden mt-8 text-center">
-                    <i class="fas fa-award text-6xl text-yellow-400 mb-4"></i>
-                    <h3 class="text-2xl dancing-script text-pink-600">Parabéns!</h3>
-                    <p class="text-lg text-purple-700 mt-2">Você conhece muito bem a melhor mãe do mundo!</p>
-                    <p class="text-purple-500 mt-4">(Personalize as respostas corretas no JavaScript para tornar o quiz mais significativo)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mensagem final -->
-    <section class="max-w-4xl mx-auto px-5 py-16 text-center">
-        <div class="bg-gradient-to-r from-pink-400 to-purple-500 text-white p-8 rounded-xl shadow-lg">
-            <h2 class="text-4xl dancing-script mb-6">Mãe, você é simplesmente incrível!</h2>
-            <p class="text-xl mb-6">Obrigado por ser quem você é e por tudo que você faz por mim.</p>
-            <p class="text-2xl dancing-script">Te amo mais que tudo neste mundo!</p>
-            <div class="mt-8 text-5xl">
-                <span class="heart-beat inline-block">❤️</span>
-                <span class="heart-beat inline-block mx-4">❤️</span>
-                <span class="heart-beat inline-block">❤️</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="bg-purple-900 text-white py-8 text-center">
-        <p class="dancing-script text-2xl mb-2">Feliz Dia das Mães!</p>
-        <p class="text-purple-300">Feito com amor por seu filho(a) - 2023</p>
-    </footer>
-
-    <script>
-        // Quiz interativo
-        let currentQuestion = 1;
-        const totalQuestions = 3;
-        
-        function checkAnswer(questionNum, selectedOption) {
-            // Aqui você pode adicionar a lógica para verificar as respostas corretas
-            // Por enquanto, apenas avança para a próxima pergunta
-            if (questionNum < totalQuestions) {
-                document.getElementById(`question-${questionNum}`).classList.add('hidden');
-                document.getElementById(`question-${questionNum + 1}`).classList.remove('hidden');
-                currentQuestion++;
-            } else {
-                document.getElementById(`question-${questionNum}`).classList.add('hidden');
-                document.getElementById('quiz-result').classList.remove('hidden');
+        @keyframes sway {
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+            50% {
+                transform: rotate(5deg);
             }
         }
         
-        // Efeito de confete ao finalizar o quiz (simulado)
-        document.getElementById('quiz-result').addEventListener('click', function() {
-            this.innerHTML += `
-                <div class="fixed inset-0 flex items-center justify-center pointer-events-none">
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                </div>
-            `;
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden">
+    <!-- Corações flutuantes decorativos -->
+    <div id="hearts-container"></div>
+    
+    <!-- Flores decorativas -->
+    <div id="flowers-container"></div>
+    
+    <!-- Conteúdo principal -->
+    <div class="container mx-auto px-4 py-12 max-w-4xl relative z-10 fade-in">
+        <!-- Cabeçalho -->
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl sacramento text-pink-600 mb-4">
+                <span class="heart-beat inline-block">❤️</span> Amor de Mãe <span class="heart-beat inline-block">❤️</span>
+            </h1>
+            <p class="text-xl text-purple-700">Para a mulher mais especial do meu coração</p>
+        </header>
+        
+        <!-- Mensagem principal -->
+        <section class="bg-white bg-opacity-80 backdrop-blur-sm rounded-xl shadow-lg p-8 mb-16 relative overflow-hidden">
+            <!-- Decoração -->
+            <div class="absolute -top-10 -left-10 text-6xl text-pink-200 opacity-50">❀</div>
+            <div class="absolute -bottom-10 -right-10 text-6xl text-purple-200 opacity-50">❀</div>
             
-            // Adiciona estilos para os confetes
+            <div class="relative z-10">
+                <h2 class="text-4xl sacramento text-center text-pink-600 mb-8">Querida Mamãe,</h2>
+                
+                <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <p>Hoje é um dia especial para celebrar o amor mais puro e verdadeiro que existe: o seu amor por mim.</p>
+                    
+                    <p>Você é meu porto seguro, meu exemplo de força e bondade, e a pessoa que sempre me apoia, não importa o que aconteça. Seu abraço tem o poder de curar qualquer dor, e seu sorriso ilumina até os dias mais difíceis.</p>
+                    
+                    <p class="text-xl sacramento text-pink-500 text-center">"Mãe é aquela pessoa que nos ama antes mesmo de nos conhecer."</p>
+                    
+                    <p>Lembro de todas as noites que você ficou acordada cuidando de mim, das suas palavras de incentivo quando eu mais precisei, e do seu jeito único de transformar qualquer situação em algo melhor.</p>
+                    
+                    <p>Você merece todo o amor e felicidade do mundo, e hoje eu quero que você se sinta a pessoa mais especial que existe. Porque para mim, você é simplesmente a melhor mãe que eu poderia ter!</p>
+                </div>
+                
+                <div class="text-center mt-10">
+                    <button id="surprise-btn" class="btn-surprise text-white font-semibold py-3 px-8 rounded-full text-lg">
+                        Mamãe, clique aqui para uma surpresa!
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Galeria de qualidades -->
+        <section class="mb-16">
+            <h2 class="text-3xl sacramento text-center text-purple-700 mb-10">Por que você é tão especial</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-pink-50 bg-opacity-70 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl text-pink-500 mb-4">💖</div>
+                    <h3 class="text-xl font-semibold text-pink-700 mb-2">Amor Incondicional</h3>
+                    <p class="text-gray-700">Você me ama sem pedir nada em troca, apenas por eu ser seu filho(a).</p>
+                </div>
+                
+                <div class="bg-purple-50 bg-opacity-70 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl text-purple-500 mb-4">✨</div>
+                    <h3 class="text-xl font-semibold text-purple-700 mb-2">Força Inspiradora</h3>
+                    <p class="text-gray-700">Sua capacidade de superar desafios me ensina a nunca desistir.</p>
+                </div>
+                
+                <div class="bg-pink-50 bg-opacity-70 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition">
+                    <div class="text-4xl text-pink-500 mb-4">🌼</div>
+                    <h3 class="text-xl font-semibold text-pink-700 mb-2">Sabedoria</h3>
+                    <p class="text-gray-700">Seus conselhos sempre me guiam pelo melhor caminho.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mensagem final -->
+        <section class="bg-gradient-to-r from-pink-400 to-purple-500 rounded-xl shadow-xl p-8 text-white text-center">
+            <h2 class="text-4xl sacramento mb-6">Mãe, você é meu mundo!</h2>
+            <p class="text-xl mb-6">Obrigado por ser quem você é e por tudo que você faz por mim.</p>
+            <p class="text-3xl sacramento">Te amo mais que tudo!</p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <span class="heart-beat inline-block text-4xl">❤️</span>
+                <span class="heart-beat inline-block text-4xl animation-delay-300">❤️</span>
+                <span class="heart-beat inline-block text-4xl animation-delay-600">❤️</span>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Rodapé -->
+    <footer class="bg-white bg-opacity-80 py-8 text-center">
+        <p class="text-lg sacramento text-pink-600 mb-2">Feliz Dia das Mães!</p>
+        <p class="text-gray-600">Feito com amor por seu filho(a) <span class="text-pink-500">💖</span></p>
+        
+        <!-- Controle de música -->
+        <div class="mt-6">
+            <button id="music-btn" class="bg-pink-100 hover:bg-pink-200 text-pink-700 py-2 px-4 rounded-full flex items-center mx-auto">
+                <i class="fas fa-music mr-2"></i>
+                <span id="music-text">Tocar música</span>
+            </button>
+        </div>
+    </footer>
+    
+    <!-- Áudio (oculto) -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <script>
+        // Criar corações decorativos
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const colors = ['#ff6b8b', '#ff8e53', '#ff4d6d', '#ff758f', '#ff85a1'];
+            
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart text-2xl md:text-3xl';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.random() * 100 + 'vh';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                heart.innerHTML = '❤️';
+                container.appendChild(heart);
+            }
+        }
+        
+        // Criar flores decorativas
+        function createFlowers() {
+            const container = document.getElementById('flowers-container');
+            const flowers = ['🌼', '🌸', '🌺', '🌷', '💐'];
+            
+            for (let i = 0; i < 10; i++) {
+                const flower = document.createElement('div');
+                flower.className = 'flower text-3xl md:text-4xl';
+                flower.style.left = Math.random() * 100 + 'vw';
+                flower.style.top = Math.random() * 100 + 'vh';
+                flower.style.animationDelay = Math.random() * 8 + 's';
+                flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+                container.appendChild(flower);
+            }
+        }
+        
+        // Botão de surpresa
+        document.getElementById('surprise-btn').addEventListener('click', function() {
+            // Criar efeito de confete
+            for (let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart absolute text-2xl';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '10vh';
+                heart.style.animation = 'fall ' + (Math.random() * 3 + 2) + 's linear forwards';
+                heart.style.color = ['#ff6b8b', '#ff8e53', '#ff4d6d', '#ff758f', '#ff85a1'][Math.floor(Math.random() * 5)];
+                heart.innerHTML = '❤️';
+                document.body.appendChild(heart);
+                
+                // Remover após animação
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+            
+            // Mostrar mensagem
+            alert("Você é meu mundo, mamãe! ❤️\nEu te amo mais que tudo!");
+        });
+        
+        // Controle de música
+        const music = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        const musicText = document.getElementById('music-text');
+        let isPlaying = false;
+        
+        musicBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                music.pause();
+                musicText.textContent = 'Tocar música';
+                musicBtn.innerHTML = '<i class="fas fa-music mr-2"></i><span id="music-text">Tocar música</span>';
+            } else {
+                music.play();
+                musicText.textContent = 'Pausar música';
+                musicBtn.innerHTML = '<i class="fas fa-pause mr-2"></i><span id="music-text">Pausar música</span>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Inicializar elementos decorativos
+        window.addEventListener('load', function() {
+            createHearts();
+            createFlowers();
+            
+            // Adicionar estilo para animação de queda dos corações (confete)
             const style = document.createElement('style');
             style.innerHTML = `
-                .confetti {
-                    position: absolute;
-                    width: 10px;
-                    height: 10px;
-                    background-color: #f00;
-                    border-radius: 50%;
-                    animation: fall 5s linear forwards;
-                }
-                
                 @keyframes fall {
                     to {
                         transform: translateY(100vh) rotate(360deg);
@@ -277,22 +279,6 @@
                 }
             `;
             document.head.appendChild(style);
-            
-            // Posiciona os confetes aleatoriamente
-            const confettis = document.querySelectorAll('.confetti');
-            const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
-            
-            confettis.forEach((confetti, index) => {
-                const left = Math.random() * 100;
-                const animationDuration = 2 + Math.random() * 3;
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                
-                confetti.style.left = `${left}%`;
-                confetti.style.animationDuration = `${animationDuration}s`;
-                confetti.style.backgroundColor = color;
-                confetti.style.top = `-10px`;
-                confetti.style.opacity = '1';
-            });
         });
     </script>
 </body>
